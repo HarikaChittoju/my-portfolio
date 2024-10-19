@@ -2,9 +2,9 @@
     "name": "my-portfolio",
     "version": "1.0.0",
     "description": "A personal portfolio website",
-    "main": "index.html",
+    "main": "index.js",  
     "scripts": {
-      "build": "echo 'No build step required'"  // Placeholder, modify if you have a build step
+      "build": "echo 'No build step required'"  
     },
     "dependencies": {},
     "devDependencies": {},
