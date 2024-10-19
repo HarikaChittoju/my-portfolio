@@ -11,21 +11,21 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3  # Latest stable version
+      uses: actions/checkout@v3
 
     - name: Set up Node.js
-      uses: actions/setup-node@v3  # Latest stable version
+      uses: actions/setup-node@v3
       with:
-        node-version: '20'  # Set to Node.js 20
+        node-version: '20'
 
     - name: Install dependencies
-      run: npm install
+      run: npm install  # This will run in the root of the repo
 
     - name: Build
-      run: npm run build
+      run: npm run build  # This will also run in the root of the repo
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3  # Make sure it's the latest
+      uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build  # or ./dist, depending on your setup
+        publish_dir: ./build  # Ensure this matches your output directory
